@@ -1,14 +1,9 @@
 spring:
   datasource:
-    dynamic:
-      primary: master
-      strict: false #启动不检查
-      datasource:
-        master:
-          url: jdbc:mysql://47.106.111.7:3306/erlangtest?serverTimezone=Asia/Shanghai&characterEncoding=utf8
-          username: erlangtest
-          password: erlangtest
-          driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.106.111.7:3306/erlangtest?serverTimezone=Asia/Shanghai&characterEncoding=utf8
+    username: erlangtest
+    password: erlangtest
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 #  redis:
 #    host: 192.168.8.138

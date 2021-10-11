@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>krpano - bb</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #000000;
+        }
+    </style>
+    <script src="/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="/js/3.1.1/layer.js"></script>
+</head>
+<body>
+<form action="/scene/createScene" enctype="multipart/form-data" method="post">
+    <input type="file" name="file"/><br/><br/>
+    <input type="number" name="projectId" value="1">
+    <input type="submit" value="上传"/>
+</form>
+
+<script type="text/javascript">
+    $(function () {
+        $("#upload").submit(function () {
+            $.ajax({
+                type: 'post',
+                url: "/scene/createScene",
+                data: new FormData($("#upload")[0]),
+                cache: false,
+                async: false,
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    let newTab = window.open('about:blank');
+                    newTab.location.href = data.data
+                },
+                error: function (xhr, error) {
+                    console.debug(xhr);
+                    console.debug(error);
+                }
+
+            })
+
+        })
+
+    });
+</script>
+</body>
+
+</html>

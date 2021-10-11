@@ -28,30 +28,30 @@ public class AutoGeneratorCode {
         // 2.数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
         MySqlQuery mySqlQuery = new MySqlQuery();
-        dsc.setUrl("jdbc:mysql://gz-cynosdbmysql-grp-af58oat5.sql.tencentcdb.com:20364/erlangtest");
+        dsc.setUrl("jdbc:mysql://110.42.222.129:3306/platform-monitor");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("erlangtest*8");
+        dsc.setPassword("Gao1399677*");
         dsc.setDbQuery(mySqlQuery);
         dsc.setDbType(DbType.MYSQL);
-        dsc.setSchemaName("erlangtest");
+        dsc.setSchemaName("");
         mpg.setDataSource(dsc);
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.wit.pano");
+        pc.setParent("com.monitor");
         pc.setController("controller");
         pc.setService("service");
         pc.setServiceImpl("service.impl");
         pc.setMapper("mapper");
         pc.setXml("mapper");
-        pc.setEntity("po");
+        pc.setEntity("entity");
         mpg.setPackageInfo(pc);
 
 
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("p_project","p_scene","p_pano_icon","p_hotspot");  // 设置要映射的表名
+        strategy.setInclude("p_camera");  // 设置要映射的表名
         strategy.setTablePrefix("p_");
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);

@@ -15,25 +15,16 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "p_camera")
-public class PCamera implements Serializable {
-    @TableId(value = "camera_id", type = IdType.AUTO)
+@TableName(value = "p_capture")
+public class PCapture implements Serializable {
+    @TableId(value = "capture_id", type = IdType.AUTO)
+    private Long captureId;
+
+    @TableField(value = "camera_id")
     private Long cameraId;
 
-    @TableField(value = "`name`")
-    private String name;
-
-    @TableField(value = "id")
-    private String id;
-
-    @TableField(value = "station")
-    private String station;
-
-    @TableField(value = "ip")
-    private String ip;
-
-    @TableField(value = "port")
-    private String port;
+    @TableField(value = "caputureName")
+    private String caputurename;
 
     @TableField(value = "create_time")
     private Date createTime;
@@ -43,17 +34,11 @@ public class PCamera implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    public static final String COL_CAPTURE_ID = "capture_id";
+
     public static final String COL_CAMERA_ID = "camera_id";
 
-    public static final String COL_NAME = "name";
-
-    public static final String COL_ID = "id";
-
-    public static final String COL_STATION = "station";
-
-    public static final String COL_IP = "ip";
-
-    public static final String COL_PORT = "port";
+    public static final String COL_CAPUTURENAME = "caputureName";
 
     public static final String COL_CREATE_TIME = "create_time";
 

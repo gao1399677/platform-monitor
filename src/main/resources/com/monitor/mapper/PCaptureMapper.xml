@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.monitor.mapper.PCaptureMapper">
+  <resultMap id="BaseResultMap" type="com.monitor.entity.PCapture">
+    <!--@mbg.generated-->
+    <!--@Table p_capture-->
+    <id column="capture_id" jdbcType="BIGINT" property="captureId" />
+    <result column="camera_id" jdbcType="BIGINT" property="cameraId" />
+    <result column="caputureName" jdbcType="VARCHAR" property="caputurename" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    capture_id, camera_id, caputureName, create_time, update_time
+  </sql>
+</mapper>

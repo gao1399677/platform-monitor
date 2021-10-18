@@ -36,7 +36,7 @@ import java.util.stream.Stream;
 @Configuration
 public class LogRecordAspect {
 
-    @Pointcut("execution(* com.wit.pano.controller.*Controller.*(..))")
+    @Pointcut("execution(* com.monitor.controller.*Controller.*(..))")
     public void executeService() {
     }
 

@@ -7,12 +7,12 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
 @EnableAspectJAutoProxy
-@MapperScan("com.wit.pano.mapper")
-public class PanoApplication {
+@MapperScan("com.monitor.mapper")
+public class MonitorApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(PanoApplication.class, args);
+        SpringApplication.run(MonitorApplication.class, args);
     }
 
 }

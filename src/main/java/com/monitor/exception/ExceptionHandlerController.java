@@ -28,6 +28,7 @@ public class ExceptionHandlerController {
         return Result.failed().msg(e.getMessage());
     }
 
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Result methodArgumentNotValidException(MethodArgumentNotValidException e) {
         e.printStackTrace();

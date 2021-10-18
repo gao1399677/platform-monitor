@@ -4,16 +4,17 @@
   <resultMap id="BaseResultMap" type="com.monitor.entity.PCamera">
     <!--@mbg.generated-->
     <!--@Table p_camera-->
-    <id column="camera_id" jdbcType="INTEGER" property="cameraId" />
+    <id column="camera_id" jdbcType="BIGINT" property="cameraId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="station" jdbcType="VARCHAR" property="station" />
     <result column="id" jdbcType="VARCHAR" property="id" />
+    <result column="station" jdbcType="VARCHAR" property="station" />
+    <result column="ip" jdbcType="VARCHAR" property="ip" />
     <result column="port" jdbcType="VARCHAR" property="port" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    camera_id, `name`, station, id, port, create_time, update_time
+    camera_id, `name`, id, station, ip, port, create_time, update_time
   </sql>
 </mapper>

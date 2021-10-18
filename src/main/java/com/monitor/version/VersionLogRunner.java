@@ -13,7 +13,7 @@ public class VersionLogRunner implements CommandLineRunner {
     @Override
     public void run(String... args) {
         log.info("******************************");
-        log.info("name = pano");
+        log.info("name = monitor");
         log.info("******************************");
     }
 

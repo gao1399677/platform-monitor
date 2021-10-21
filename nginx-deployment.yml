@@ -1,20 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: monitor-spring-boot
+  name: nginx
 spec:
   selector:
     matchLabels:
-      app: monitor
+      app: nginx
   replicas: 1
   template:
     metadata:
       labels:
-        app: monitor
+        app: nginx
     spec:
       containers:
-        - name: monitor
-          image: harbor.local/test/monitor:latest
-          ports:
-            - containerPort: 8083
+        - name: nginx
+          image: bitnami/nginx
           imagePullPolicy: IfNotPresent

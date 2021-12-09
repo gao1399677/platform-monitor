@@ -6,5 +6,5 @@ RUN /bin/bash -c "touch /monitor.jar"
 
 EXPOSE 8083
 
-ENTRYPOINT ["java","-jar","monitor.jar","spring.profiles.active=test"]
+ENTRYPOINT ["java","-jar","monitor.jar","spring.profiles.active=test", "-g", "daemon off;"]
 

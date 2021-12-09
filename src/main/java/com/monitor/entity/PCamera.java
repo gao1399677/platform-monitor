@@ -17,14 +17,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @TableName(value = "p_camera")
 public class PCamera implements Serializable {
-    @TableId(value = "camera_id", type = IdType.AUTO)
-    private Long cameraId;
+
+    @TableId(value = "id")
+    private String id;
 
     @TableField(value = "`name`")
     private String name;
-
-    @TableField(value = "id")
-    private String id;
 
     @TableField(value = "station")
     private String station;

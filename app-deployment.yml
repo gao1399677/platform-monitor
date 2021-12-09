@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: monitor
-          image: harbor.local/test/monitor:latest
+          image: harbor.local/test/monitor:monitor
           ports:
             - containerPort: 8083
           imagePullPolicy: IfNotPresent

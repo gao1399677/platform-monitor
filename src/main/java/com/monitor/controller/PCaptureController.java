@@ -15,7 +15,8 @@ public class PCaptureController {
 
     @PostMapping({"/capture_camera"})
     public Result captureCamera(@RequestBody PCapture pCapture) {
-        pCaptureService.getBaseMapper().insert(pCapture);
+
+        pCaptureService.captureCamera(pCapture);
         return Result.success();
     }
 

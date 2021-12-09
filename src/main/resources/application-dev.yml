@@ -4,3 +4,6 @@ spring:
     username: root
     password: gao1399677
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+monitor:
+  url: http://192.168.8.136:8080/

@@ -4,24 +4,27 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
-import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.util.Date;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @TableName(value = "p_capture")
+@Accessors(chain = true)
 public class PCapture implements Serializable {
     @TableId(value = "capture_id", type = IdType.AUTO)
     private Long captureId;
 
-    @TableField(value = "camera_id")
-    private Long cameraId;
+    @TableField(value = "id")
+    private String id;
 
     @TableField(value = "caputureName")
     private String caputurename;

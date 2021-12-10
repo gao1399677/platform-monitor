@@ -15,7 +15,6 @@ import java.util.Optional;
 
 @RestController
 public class PCameraController {
-
     @Autowired
     private PCameraService pCameraService;
 
